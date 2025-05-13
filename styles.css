@@ -1,0 +1,176 @@
+:root {
+    --lilac: #C8A2C8;
+    --baby-pink: #F4C2C2;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--lilac);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: var(--baby-pink);
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    color: var(--lilac);
+  }
+  
+  header p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .navbar {
+    margin-bottom: 1rem;
+  }
+  
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: var(--lilac);
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: #fff;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .store-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+  
+  .store-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .store-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .store-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  
+  .rotate {
+    animation: rotateAnimation 1s linear;
+  }
+  
+  @keyframes rotateAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .store-card h3 {
+    margin: 1rem;
+    color: var(--lilac);
+  }
+  
+  .store-card p {
+    margin: 0 1rem 1rem;
+    color: #666;
+  }
+  
+  .settings {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  .settings label {
+    font-size: 1.1rem;
+    color: var(--baby-pink);
+  }
+  
+  .settings select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--lilac);
+    background-color: #fff;
+    margin-left: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .settings select:focus {
+    outline: none;
+    border-color: var(--baby-pink);
+  }
+  
+  button {
+    background-color: var(--baby-pink);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: var(--lilac);
+    transform: translateY(-2px);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--baby-pink);
+    color: var(--lilac);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.75rem;
+    }
+  
+    .store-card img {
+      height: 150px;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
